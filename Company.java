@@ -7,8 +7,12 @@ public class Company {
     private int credit; // Расход
     private TaxSystem taxSystem; // Система налогооблажения
 
+    public void setTaxSystem(TaxSystem taxSystem){
+        this.taxSystem = taxSystem;
+
+    }
     // Конструктор, debit и credit изначально равны нулю
-    public Company(String title, int debit, int credit, TaxSystem taxSystem) {
+    public Company(String title, TaxSystem taxSystem) {
         this.title = title;
         this.debit = 0;
         this.credit = 0;
@@ -22,6 +26,11 @@ public class Company {
         } else {
             System.out.println("Количество равно нулю");
         }
+    }
+    public void payTaxes(){
+        int tax = taxSystem.calcTaxFor(debit, credit);
+        System.out.println("Контора " + title + " выплатила " + tax);
+
     }
 
 

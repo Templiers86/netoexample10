@@ -1,11 +1,11 @@
 package taxes;
 
 public class YsnMinusIncom extends TaxSystem {
-    @Override
-    public static int YsnMinusIncom(int debit, int credit) {
-        int tax = (debit - credit) * 15 / 100;
-        if(tax >= 0) {
-            return tax;
+
+    public static int calInMin(int debit, int credit) {
+        int meaning2 = (debit - credit) * 15 / 100;
+        if(meaning2 >= 0) {
+            return meaning2;
         } else {
             return 0;
         }

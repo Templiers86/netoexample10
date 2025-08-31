@@ -2,12 +2,13 @@ package taxes;
 
 public class YsnIncom extends TaxSystem  {
 
-    public static int YsnIncom(int debit){
-        int tax = debit * 6 /100;
-        if(tax >= 0) {
-            return tax;
+    public static int calIn(int debit){
+        int meaning1 = debit * 6 /100;
+        if(meaning1 >= 0) {
+            return meaning1;
         } else {
             return 0;
+
         }
     }
 }
